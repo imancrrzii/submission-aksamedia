@@ -14,6 +14,20 @@ class DivisionSeeder extends Seeder
      */
     public function run(): void
     {
-        Division::factory(12)->create();
+        $divisions = [
+            'Mobile Apps',
+            'QA',
+            'Full Stack',
+            'Backend',
+            'Frontend',
+            'UI/UX Designer'
+        ];
+
+        foreach ($divisions as $division) {
+            Division::create([
+                'id' => (string) Str::uuid(),
+                'name' => $division,
+            ]);
+        }
     }
 }

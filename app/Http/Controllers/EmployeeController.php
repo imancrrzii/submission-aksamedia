@@ -45,7 +45,7 @@ class EmployeeController extends Controller
 
             return response()->json([
                 'status' => 'success',
-                'message' => 'Data fetched successfully',
+                'message' => 'Data karyawan berhasil diambil',
                 'data' => [
                     'employees' => $transformedEmployees,
                 ],
